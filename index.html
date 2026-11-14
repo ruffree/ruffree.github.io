@@ -22,7 +22,8 @@ iframe{position:fixed;inset:0;width:100%;height:100%;border:0;padding-top:env(sa
 <script>
 var EXEC = "https://script.google.com/macros/s/AKfycbyhpXEGlh6f6WIvlj6AYjTeRegDXBdcKiLrd1M0-CMZetv8W_WoWNBJkohEKko9Yb_UIQ/exec";
 var page = new URLSearchParams(location.search).get('page');
-document.getElementById('app').src = EXEC + (page === 'nippo' ? '?page=nippo' : '');
+// 最初はホーム（日報・学習・マニュアル）を開く。?page=learn のときだけ学習ツールを開く
+document.getElementById('app').src = EXEC + (page === 'learn' ? '' : '?page=nippo');
 </script>
 </body>
 </html>
