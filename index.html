@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>RUFFREE</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="RUFFREE">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#e0704a">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<style>
+html,body{margin:0;height:100%;background:#fbf5ee}
+iframe{position:fixed;inset:0;width:100%;height:100%;border:0;padding-top:env(safe-area-inset-top);box-sizing:border-box;background:#fbf5ee}
+</style>
+</head>
+<body>
+<iframe id="app" title="RUFFREE" allow="clipboard-write"></iframe>
+<script>
+var EXEC = "https://script.google.com/macros/s/AKfycbyhpXEGlh6f6WIvlj6AYjTeRegDXBdcKiLrd1M0-CMZetv8W_WoWNBJkohEKko9Yb_UIQ/exec";
+var page = new URLSearchParams(location.search).get('page');
+document.getElementById('app').src = EXEC + (page === 'nippo' ? '?page=nippo' : '');
+</script>
+</body>
+</html>
